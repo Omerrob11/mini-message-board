@@ -2,6 +2,7 @@
 // so we extract the group of routes to their own file
 
 const { Router } = require("express");
+const indexRouter = Router();
 
 const messages = [
   {

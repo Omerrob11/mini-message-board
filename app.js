@@ -26,9 +26,13 @@ const { messages, indexRouter } = require("./routes/index");
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-  res.render("index", { title: "Mini MessageBord", messages });
-});
+// app.get("/", (req, res) => {
+//   res.render("index", { title: "Mini MessageBord", messages });
+// });
+
+// refactor code to use router
+
+app.use("/", indexRouter);
 
 const PORT = 3000;
 app.listen(PORT);
